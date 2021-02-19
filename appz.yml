@@ -22,14 +22,14 @@ volumes:
   - claim: wp-uploads
     mount: /var/www/html/wp-content/uploads
     name: uploads
-    size: 250Gi
+    size: 5Gi
     mode: ReadWriteOnce
     class: standard
     matchLabels: false
   - claim: wp-backup
     mount: /appz/backup
     name: backup
-    size: 250Gi
+    size: 5Gi
     mode: ReadWriteOnce
     class: standard
     matchLabels: false
@@ -40,12 +40,12 @@ monitor:
 properties:
   MYSQL_HOST : "mysql-5-7:3306"
   MYSQL_DATABASE : "pb4u"
-  MYSQL_USER : "ecloudcontrol_com"
+  MYSQL_USER : "pb4u"
   ENABLE_HA : "no"
   MYSQL_PASSWORD:
      vault: MYSQL_PASSWORD
   SITE_URL : "https://pb4u.ecloudcontrol.com"
-  SITE_TITLE : "CLOUDCONTROL"
+  SITE_TITLE : "pb4u"
   ADMIN_USER : webmaster
   ADMIN_EMAIL : webmaster@ecloudcontrol.com
   ADMIN_PASSWORD:
