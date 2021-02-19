@@ -1,5 +1,5 @@
 app:
-  name: pb4u.ecloudcontrol.com
+  name: pb4u
   code: ECSWEB
   notify: appzdev@cloudbourne.co
 
@@ -33,9 +33,6 @@ volumes:
     mode: ReadWriteOnce
     class: standard
     matchLabels: false
-
-monitor:
-  notify: appzops@cloudbourne.co      
 
 properties:
   MYSQL_HOST : "mysql-5-7:3306"
